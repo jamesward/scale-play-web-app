@@ -1,5 +1,5 @@
 #!/bin/sh
 
-java -server -Xms3072m -Xmx3072m  \
-    -cp `lein classpath` clojure.main \
-    -m main $@
+cd src
+~/play-2.1-RC2/play stage
+target/start -Xms3072m -Xmx3072m -Dhttp.port=8000
